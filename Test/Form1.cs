@@ -13,19 +13,14 @@ namespace Test
             double decimales = 122.3;
             bool booleano = false;
 
-            int edad = int.Parse(inputEdad.Text);
-            if (edad >= 18)
-            {
-                txtResultado.Text = "Eres Mayor"+" de Edad";
-            }
-            else
-            {
-                txtResultado.Text = "Eres menor de edad"; 
-            }
-            
+            double peso = Double.Parse(inputPeso.Text);
+            double altura = Double.Parse(inputAltura.Text);
 
+            double imc = peso / (altura * altura);
 
+            txtResultado.Text = "Tu indice de masa coporal es: " + imc;
 
+            MessageBox.Show("el IMC es: "+imc); 
         }
     }
 }

@@ -29,44 +29,75 @@
         private void InitializeComponent()
         {
             txtResultado = new Label();
-            button1 = new Button();
-            inputEdad = new TextBox();
+            btnCalcular = new Button();
+            inputPeso = new TextBox();
+            inputAltura = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // txtResultado
             // 
             txtResultado.AutoSize = true;
             txtResultado.ForeColor = Color.CornflowerBlue;
-            txtResultado.Location = new Point(347, 158);
+            txtResultado.Location = new Point(242, 160);
             txtResultado.Name = "txtResultado";
-            txtResultado.Size = new Size(74, 15);
+            txtResultado.RightToLeft = RightToLeft.No;
+            txtResultado.Size = new Size(0, 15);
             txtResultado.TabIndex = 0;
-            txtResultado.Text = "Hola Mundo";
             // 
-            // button1
+            // btnCalcular
             // 
-            button1.Location = new Point(347, 193);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Cambiar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnCalcular.Location = new Point(241, 117);
+            btnCalcular.Name = "btnCalcular";
+            btnCalcular.Size = new Size(75, 23);
+            btnCalcular.TabIndex = 1;
+            btnCalcular.Text = "Calcular";
+            btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += button1_Click;
             // 
-            // inputEdad
+            // inputPeso
             // 
-            inputEdad.Location = new Point(347, 115);
-            inputEdad.Name = "inputEdad";
-            inputEdad.Size = new Size(100, 23);
-            inputEdad.TabIndex = 2;
+            inputPeso.Location = new Point(232, 34);
+            inputPeso.Name = "inputPeso";
+            inputPeso.Size = new Size(100, 23);
+            inputPeso.TabIndex = 2;
+            // 
+            // inputAltura
+            // 
+            inputAltura.Location = new Point(232, 74);
+            inputAltura.Name = "inputAltura";
+            inputAltura.Size = new Size(100, 23);
+            inputAltura.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(166, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(32, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Peso";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(166, 82);
+            label2.Name = "label2";
+            label2.Size = new Size(39, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Altura";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(inputEdad);
-            Controls.Add(button1);
+            ClientSize = new Size(584, 257);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(inputAltura);
+            Controls.Add(inputPeso);
+            Controls.Add(btnCalcular);
             Controls.Add(txtResultado);
             Name = "Form1";
             Text = "Form1";
@@ -77,7 +108,10 @@
         #endregion
 
         private Label txtResultado;
-        private Button button1;
-        private TextBox inputEdad;
+        private Button btnCalcular;
+        private TextBox inputPeso;
+        private TextBox inputAltura;
+        private Label label1;
+        private Label label2;
     }
 }
