@@ -34,6 +34,10 @@
             inputAltura = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            btnFor = new Button();
+            textArea = new ListBox();
+            select = new ComboBox();
+            agregarTextArea = new Button();
             SuspendLayout();
             // 
             // txtResultado
@@ -88,11 +92,52 @@
             label2.TabIndex = 5;
             label2.Text = "Altura";
             // 
+            // btnFor
+            // 
+            btnFor.Location = new Point(46, 225);
+            btnFor.Name = "btnFor";
+            btnFor.Size = new Size(75, 23);
+            btnFor.TabIndex = 6;
+            btnFor.Text = "BotonFor";
+            btnFor.UseVisualStyleBackColor = true;
+            btnFor.Click += btnFor_Click;
+            // 
+            // textArea
+            // 
+            textArea.FormattingEnabled = true;
+            textArea.ItemHeight = 15;
+            textArea.Location = new Point(427, 23);
+            textArea.Name = "textArea";
+            textArea.Size = new Size(310, 409);
+            textArea.TabIndex = 7;
+            // 
+            // select
+            // 
+            select.FormattingEnabled = true;
+            select.Location = new Point(765, 23);
+            select.Name = "select";
+            select.Size = new Size(121, 23);
+            select.TabIndex = 8;
+            // 
+            // agregarTextArea
+            // 
+            agregarTextArea.Location = new Point(790, 63);
+            agregarTextArea.Name = "agregarTextArea";
+            agregarTextArea.Size = new Size(75, 23);
+            agregarTextArea.TabIndex = 9;
+            agregarTextArea.Text = "Agregar";
+            agregarTextArea.UseVisualStyleBackColor = true;
+            agregarTextArea.Click += agregarTextArea_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 257);
+            ClientSize = new Size(1348, 653);
+            Controls.Add(agregarTextArea);
+            Controls.Add(select);
+            Controls.Add(textArea);
+            Controls.Add(btnFor);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(inputAltura);
@@ -101,6 +146,7 @@
             Controls.Add(txtResultado);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,5 +159,9 @@
         private TextBox inputAltura;
         private Label label1;
         private Label label2;
+        private Button btnFor;
+        private ListBox textArea;
+        private ComboBox select;
+        private Button agregarTextArea;
     }
 }
